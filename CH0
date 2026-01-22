@@ -1,0 +1,16 @@
+// Introduction
+
+// basic
+// 1. Reference: 變數的別名，比指標安全。
+// 2. Class: 封裝資料與行為，區分 public/private。
+// 3. Constructor/Destructor: 物件的生死與資源自動管理 (RAII)。
+// 4. New/Delete: C++ 版的記憶體管理。
+// 5. Inheritance: 繼承父類別的功能。
+// 6. Polymorphism: 用 virtual 實現一個介面、多種功能。
+// 7. STL: 強大的現成工具庫。
+
+// advanced
+// 8. 萬用的模具 (Templates)
+// 9. 智慧指標 (Smart Pointers) 
+// 10. 匿名函式 (Lambda) 
+// 11. 異常處理 (Exception) 
