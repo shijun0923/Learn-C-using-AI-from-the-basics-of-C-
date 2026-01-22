@@ -1,0 +1,41 @@
+// C++ 學習總結 (The Grand Finale)
+
+// 1. 核心哲學：RAII (資源取得即初始化)這我們整套課程的靈魂。
+// 觀念：利用物件的「生命週期」來管理資源。
+// 實踐：
+// 建構子 (Constructor)：出生時拿資源。
+// 解構子 (Destructor)：死亡時放資源。
+// 好處：永遠不用擔心忘記釋放記憶體，不用擔心 Memory Leak。
+
+// 2. 記憶體演化史 (Memory Management)
+// 我們經歷了三個階段的進化：
+// 石器時代 (C)：malloc / free。手動算大小，危險且麻煩。
+// 工業時代 (C++98)：new / delete。自動呼叫建構子，但還是要記得刪。
+// 現代文明 (Modern C++)：unique_ptr / shared_ptr。
+// 完全自動化，這是你現在該用的標準。
+
+// 3. 物件導向三大支柱 (OOP)封裝 (Encapsulation)：
+// public 對外，private 對內，protected 給兒子。
+// 使用 class 來保護數據，不讓外人隨意亂改。
+// 繼承 (Inheritance)：class Warrior : public Character。
+// 解決重複程式碼的問題 (Is-a 關係)。
+// 記得 初始化列表 : Character(n) 的用法（先有爸爸才有兒子）。
+// 多型 (Polymorphism)：關鍵字 virtual 和 override。
+// 父類別指標 可以指向 子類別物件。讓程式碼依賴於「介面 (Interface)」，而不是具體的「實作」。
+
+// 4. 現代化工具箱 (Modern Tools)
+// Template (模具)：template <typename T>。
+// 寫一次程式碼，支援 int, double, string 所有型別。
+// Lambda (匿名函式)：[](){}。隨手寫的小工具，搭配 STL 演算法 (sort, count_if) 是絕配。
+// 記得 [&] (參考捕捉) 和 [=] (複製捕捉) 的差別。
+// Exception (異常處理)：try, catch, throw。
+// 取代回傳錯誤碼，強制開發者處理錯誤，且保證 Stack Unwinding (自動解構) 的安全性。
+
+// 給 C 語言轉職者的最後建議 (Mindset Shift)
+// 你現在已經具備 C++ 的能力了，但在寫 code 時，請時時刻刻提醒自己轉換思維：
+// 看到陣列 -> 請改用 std::vector。
+// 看到字串 -> 請改用 std::string。
+// 看到指標 -> 先想「我真的需要它嗎？」
+// 如果需要，請優先用 unique_ptr，最後才考慮 Raw Pointer。
+// 看到重複的邏輯 -> 想想能不能用 Template 或繼承來簡化。
+// 不要再用 #define -> 改用 const 或 enum。
