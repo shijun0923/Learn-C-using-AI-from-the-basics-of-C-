@@ -14,7 +14,7 @@
 
 // 範例:
 #include <iostream>  // C++ 的標準輸入輸出函式庫 (取代 stdio.h)
-using namespace std;  // 讓我們可以直接用 cout 而不用打 std::cout
+using namespace std;  // 讓我們可以直接用 cout 而不用打 std::cout (固定會寫的)
 int main() {
     int age;
     float height;
@@ -61,7 +61,7 @@ int main() {
     int y = 20;
     // 很直覺，直接傳變數，就像傳值一樣簡單
     swap(x,y);
-    cout<<"x:"<<x<<" , y:"<<y<<endl;
+    cout << "x:"<< x << " , y:" << y << endl;
     return 0;
 }
 
@@ -86,7 +86,7 @@ struct player {
     int mp;
     int exp;
 };
-// 【C++ 寫法】：傳 const 參考 (const Reference)
+//【C++ 寫法】：傳 const 參考 (const Reference)
 // 優點：
 // 1. & 代表只傳地址 (不複製 struct，省效能)
 // 2. const 代表唯讀 (保證不會偷改 hp)
@@ -103,7 +103,6 @@ int main() {
 // 以後在 C++ 看到函式參數寫 const string &s 或 const Vector &v，就是這個意思：「我只讀不改，而且我不複製。」
 
 // 範例二：參考的「忠誠度」 (不能重導向)
-// 指標是「自由人」，今天可以指 A，明天可以改指 B。
 // 參考是「死忠粉」，一旦初始化綁定誰，這輩子就是誰的分身，不能換人。
 #include <iostream>
 using namespace std;
@@ -125,7 +124,7 @@ int main() {
 // 參考必須在宣告時就初始化（int &r = a;），而且之後永遠不能改變指向的對象。
 // 如果你需要可以隨時切換指向目標的功能，那你還是得用指標。
 // 只有這 3 種情況：請退回去用「指標 (Pointer)」
-// 情況 A：你需要「空值」
+// 情況 A：你需要「空值」(nullptr)
 // 情況 B：你需要「更換指向的對象」
 // 情況 C：相容 C 語言舊程式庫
 
