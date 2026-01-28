@@ -9,14 +9,14 @@
 // 你定義一個 struct Student (只有資料)，然後另外寫一堆函式像來操作它。
 // 資料是死的，函式是活的，它們分家。
 // C++ 的作法 (資料與動作合體)：
-// 我們認為「學生」不應該只是一堆數據，學生應該自帶功能（自己會印成績單、自己會算平均分
+// 我們認為「學生」不應該只是一堆數據，學生應該自帶功能（自己會印成績單、自己會算平均分)
 // 所以，我們把「變數 (Data)」和「函式 (Function)」包在同一個大括號裡，這就是 Class (類別)。
 
 // 2. 權限控制：Public vs. Private
 // 這是 C 語言完全沒有的概念。在 C 語言的 struct 裡，所有資料都是「裸奔」的，任何人都能隨意修改 s.score = -100
 // C++ 引入了「存取權限」，把不該被外面亂動的資料鎖起來，只開放安全的窗口。
-// private (私有)：只有 Class 內部自己的函式可以存取。
-// public (公開)：外面的 main 函式可以用。
+// private (私有)：只有 Class 內部自己的函式可以存取。(ex. member variables)
+// public (公開)：外面的 main 函式可以用。(ex. member functions)
 
 // 實戰程式碼：銀行帳戶
 #include <iostream>
@@ -60,8 +60,8 @@ public:
 int main() {
     // 這時候記憶體才真正被分配出來
     bankaccount account1;
+    
     account1.init("Justin", 1000);
-
     account1.deposit(500);
     account1.showbalence();
 
