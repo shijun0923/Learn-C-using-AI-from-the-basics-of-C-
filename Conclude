@@ -1,6 +1,9 @@
 // C++ 學習總結 (The Grand Finale)
 
 // 1. 核心哲學：RAII (資源取得即初始化)這我們整套課程的靈魂。
+// RALL = Resource Acquisition Is Initialization（資源取得即初始化）
+// 就是利用「解構子會自動執行」的特性，來保證「不管發生什麼意外，資源（記憶體、檔案、鎖）一定會被釋放
+
 // 觀念：利用物件的「生命週期」來管理資源。
 // 實踐：
 // 建構子 (Constructor)：出生時拿資源。
@@ -38,4 +41,4 @@
 // 看到指標 -> 先想「我真的需要它嗎？」
 // 如果需要，請優先用 unique_ptr，最後才考慮 Raw Pointer。
 // 看到重複的邏輯 -> 想想能不能用 Template 或繼承來簡化。
-// 不要再用 #define -> 改用 const 或 enum。
+// 不要再用 #define -> 改用 const 或 enum。 (#define MAX_HP 100 -> const int MAX_HP = 100;)
