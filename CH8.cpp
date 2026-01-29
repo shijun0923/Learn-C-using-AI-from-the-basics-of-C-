@@ -95,6 +95,8 @@ int main() {
     
     return 0;
 }
+// So if you want to add two numbers like the first example, you need to use "auto" -> auto add(T1 a, T2 b) {}
+// and based on C++ mathmatical rules, the maxmimum and the safest types are automatically derived
 
 // 總結:
 // 為什麼要用 Template？ 為了「程式碼重用」。不要因為型別不同就重寫一樣的邏輯。
